@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import {createStackNavigator} from '@react-navigation/stack';
 import Deposit from "../screens/operations/Deposit";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -10,18 +10,18 @@ import Element3 from "../screens/operations/element3";
 import Cobrar from "../screens/operations/Cobrar";
 import Pagar from "../screens/operations/Pagar";
 import ConfirmarPagamento from "../screens/operations/ConfirmacaoPagamento";
+import { AuthContext } from "../Context/Auth";
 
 
 
  const tab = createBottomTabNavigator();
 function PrincipalNavegation(){
-    return(
+
+    return( 
     <tab.Navigator
-        initialRouteName="home"
-        
+        initialRouteName="transacoes"
     >
-        <tab.Screen name="transacoes" component={Transaction}
-        
+        <tab.Screen name="transacoes" component={Transaction}      
         />
         <tab.Screen name="home" component={Home}/>
     </tab.Navigator>
@@ -30,6 +30,8 @@ function PrincipalNavegation(){
 }   
 
 const Stack = createStackNavigator();
+
+
 
 function MyStack(){
     return(

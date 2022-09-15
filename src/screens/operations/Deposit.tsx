@@ -4,9 +4,7 @@ import { Button } from 'react-native-paper';
 
 
 const Deposit = ({navigation, route}) =>{
-    
     console.log(route.params);
-
     return(
         <View>
             <Text>Tipo conta: {route.params.checked}</Text>
@@ -16,5 +14,4 @@ const Deposit = ({navigation, route}) =>{
 
     );
 }
-
 export default Deposit;
