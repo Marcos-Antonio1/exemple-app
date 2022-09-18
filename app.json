@@ -24,7 +24,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.marcos_1012.exempleapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"

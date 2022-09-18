@@ -13,7 +13,6 @@ import ConfirmarPagamento from "../screens/operations/ConfirmacaoPagamento";
 import { AuthContext } from "../Context/Auth";
 
 
-
  const tab = createBottomTabNavigator();
 function PrincipalNavegation(){
 

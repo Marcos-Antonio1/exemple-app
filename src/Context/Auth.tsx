@@ -10,7 +10,7 @@ const AuthProvider = (props)=>{
    const [colors,setColors] = React.useState();
 
     useEffect(()=>{
-        setColors(ColorsPremium)
+        setColors(Colors)
     })
     return(
         <AuthContext.Provider
