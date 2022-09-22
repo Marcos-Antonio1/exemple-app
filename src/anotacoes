@@ -1,0 +1,42 @@
+Script para amanhã:
+===========================
+contas para usar: 
+
+
+========================
+
+	1⁰ Limite Diário;
+		- o que eu preciso:
+			-> Uma conta ativa com limite de 1000 reais
+		   -Verificação: 
+		       -> é soma de todos os lançamentos que saem dessa conta correspondentes a transferências e pix, tem que ser menor ou igual ao, limite diário, porém isso é mais flexivél pois o cliente pode pedir para aumentar o limite de sua conta.
+		       
+		       -> mostrar na prática esse funcionamento 
+			 
+	2⁰ Segmentação dos clientes;
+		
+		- o que eu preciso:
+			-> Duas contas: uma PREMIUM E UMA STANDART
+		
+		- Primeiro a modificação na api que possibilitou termos dois tipos de conta STANDART E PREMIUM
+		- utilização de context api(react native) -> ele nos possibilita um estado global que pode ser visível de toda a aplicação, a partir dai usamos o tipo da conta para definir quais as cores seriam renderizadas, também utilizamos o context api ao realizar para redirecionar para nossas rotas autorizadas ou para as não autorizadas. da seguinte forma ao cliente realizar o login e pego o token que valida a entrada do usuário no app e o redireciona para as rotas que exigem a autenticação, e apartir das informações do token retiramos o tipo da conta assim podemos controlar qual usuário está logado é qual é a segmentação dessa conta.
+		
+		-Utilizando context api exoneramos uma grande parte do trabalho de está passando todas as propriedades de por toda a arvore de componentes do react até chega no elemento que desejamos usar aquela informação, uma vez que o context api é global podemos utiliza-lo apenas importando um hook(independente da árvore de compoonentes),e assim podendo usar todos os seus estados. 
+		
+		
+		- escolhemos utilizar o context api ao invés do redux por exemplo pela sua simplicidade de trabalha e pelo o fato de não estarmos lidando com muitos estados que deveriam ser compartilhado entre os componentes da nossa aplicação, além disso o context api vem de forma nativa no react.
+		
+		redux: é uma ferramenta muito complexa para projetos mais simples.
+		
+		- vamos ao que é importante: mostrar as duas contas e suas segmentações.
+		
+		
+		
+	3⁰ qrcode:
+		o que eu preciso uma conta
+		
+		- Qual a principal ideia prover cobranças por pix através de um meio facilitado que é o qcode.
+		- O que a funcionalidade faz, pega os dados do pix daquele conta com o valor que o proprietário deseja receber e cria um qrcode,
+		- ao outro usuário ler aquele qrcode aparecerá um campo parecido com o de transferência com os dados de pra onde enviar aquela quantia.
+		- No entanto, tivemos problemas no emulador e na versão do sdk do expo para a leitura, por isso não demostraremos como um todo a funcionalidade.
+		
